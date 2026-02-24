@@ -25,9 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$sqk(m)9c!p4$n7lae5v7vfi_z!mh(1y+51bd+b7=83ca_1qle'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*', '.railway.app', 'localhost', '127.0.0.1']
+DEBUG = False
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-be7c0.up.railway.app',
+    'https://*.railway.app'
+]
+ALLOWED_HOSTS = ['https://web-production-be7c0.up.railway.app', 'localhost', '127.0.0.1']
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
