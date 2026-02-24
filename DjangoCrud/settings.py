@@ -30,7 +30,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://web-production-be7c0.up.railway.app',
     'https://*.railway.app'
 ]
-ALLOWED_HOSTS = ['https://web-production-be7c0.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*', '.railway.app', 'localhost', '127.0.0.1']
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
